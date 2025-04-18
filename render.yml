@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: spring-security-app
+    env: java
+    buildCommand: "./gradlew build"
+    startCommand: "java -jar build/libs/Springboot_Security-0.0.1-SNAPSHOT.jar"
+    plan: free
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: production
